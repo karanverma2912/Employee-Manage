@@ -4,7 +4,7 @@ class Employee < ApplicationRecord
   belongs_to :manager, class_name: "Employee", optional: true
   has_many :subordinates, class_name: "Employee", foreign_key: "manager_id", dependent: :nullify
   has_one :employee_profile, dependent: :destroy
-  has_many :salaries, dependent: :destroy
+  has_many :salaries, dependent: :destroy, strict_loading: true
   has_many :project_assignments, dependent: :destroy
   has_many :projects, through: :project_assignments
   has_and_belongs_to_many :certifications

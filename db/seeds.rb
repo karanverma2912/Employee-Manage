@@ -4,8 +4,8 @@ require 'faker'
   AuditLog,                    # No dependencies
   Performance,                 # Depends on Employee ✓
   ProjectAssignment,           # Depends on Project/Employee ✓
-  # Certification join table first, THEN Certification
-  Certification,               # THEN Certification
+    # Certification join table first, THEN Certification
+    Certification,               # THEN Certification
   Budget,                      # Depends on Department ✓
   Salary,                      # Depends on Employee ✓
   EmployeeProfile,             # Depends on Employee ✓
